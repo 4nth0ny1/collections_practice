@@ -1,3 +1,6 @@
+require 'pry'
+
+
 def sort_array_asc (arr)
     arr.sort
 end
@@ -24,20 +27,18 @@ def reverse_array(arr)
 end
 
 def kesha_maker(arr)
-    arr.each do |word|
-       word[2] = "$"
-    end 
-    
+    arr.each {|word| word[2] = "$"}  
 end
 
 def find_a(arr)
-    arr.select do |word|
-        word.start_with?('a')
-    end
+    arr.select {|word|word.start_with?('a')}
 end
 
 def sum_array(arr)
-    arr.sum
+    # arr.sum
+    sum = 0
+    arr.map { |i| sum += i}
+    sum
 end
 
 def add_s(arr)
